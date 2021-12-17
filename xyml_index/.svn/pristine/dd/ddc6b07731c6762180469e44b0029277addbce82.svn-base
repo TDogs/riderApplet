@@ -1,0 +1,15 @@
+
+ 
+.text_bottom .bnt{ float: right; line-height:60rpx;}
+ 
+.txt{margin:50rpx;color:#333;}
+.txt text{text-align: center;width: 100%;display: block;margin: 15rpx 0;font-size: 34rpx;}
+
+.btn_box{margin:60rpx 0;text-align: center;}
+.btn{ width:40%; margin:0 2%; font-size:30rpx;text-align: center;color: #fff;background: #dc0531;border-radius:5px;-moz-border-radius:5px; display:inline-block; padding:20rpx 0;}
+.btn2{color:#fff;background: #1aad19;}
+.viewHistory{text-decoration: underline;font-size: 30rpx;color:#dc0531}
+
+
+
+

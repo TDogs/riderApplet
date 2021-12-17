@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "regist": "../components/regist/regist",
+    "auth": "../components/auth/auth"
+  }
+}

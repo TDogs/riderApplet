@@ -1,0 +1,21 @@
+/* pages/authentication/authentication.wxss */
+page{ padding-top: 80rpx;background: #fff;}
+
+.grxx .box{ margin:0 40rpx; padding: 25rpx 0; overflow: hidden; border-bottom:1px solid #eee;}
+.grxx .box .left{ width: 25%; float: left;}
+.grxx .box .right{ width: 75%; float: right; text-align: right; color: #999; overflow:hidden; text-overflow:ellipsis; -o-text-overflow:ellipsis; white-space:nowrap; position: relative;}
+.grxx .box .right .weui-input{ font-size: 28rpx;}
+.grxx .box .right.hov{ color: #333;}
+.grxx .box .right .ico_fh{width: 40rpx; position: absolute; right: -10rpx; top:0;}
+.grxx .box .right picker{ margin-right: 40rpx;}
+
+.identityCard{ text-align: center; position: relative;}
+.identityCard .imgs_i{ width: 640rpx; height: 454rpx; border-radius:15px; -moz-border-radius:15px; overflow: hidden;}
+.identityCard .imgs_i image{ width: 100%;}
+.identityCard .imgs_p{ width: 640rpx; height: 454rpx; border-radius:15px; -moz-border-radius:15px; overflow: hidden; position: absolute; left: 0; top: 0;}
+.identityCard .imgs_p image{ width: 640rpx;}
+.identityCard .imgs_text{ padding-top: 30rpx;}
+
+.grxx .box_bnt{ padding:10px 0 20px; overflow:hidden; text-align:center;}
+.grxx .box_bnt .bnt{ width:90%; margin:0px 5px; display:inline-block; line-height:45px; text-align:center; color:#fff; background:#333; border-radius:3px; -moz-border-radius:3px;}
+.grxx .box_bnt .bnt_tj{ background:#8547ad; color:#fff;}

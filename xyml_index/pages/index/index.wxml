@@ -1,0 +1,9 @@
+<view hidden="{{auth_hidden}}">
+<view class="logo"><image mode="widthFix" src="../images/tuzi.gif"></image></view>
+<view class="com">
+  <view class="title">你好，我是元祖好礼脱兔，我们认识一下吧</view>
+  <view class="text">请允许我们获取您的基础信息（昵称与头像），才能正常使用</view>
+  <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">好的</button>
+</view>
+</view>
+ 

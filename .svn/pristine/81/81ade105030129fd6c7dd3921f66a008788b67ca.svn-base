@@ -1,0 +1,16 @@
+<!--pages/menu/menu.wxml-->
+<view class="nav_bg hov">
+  <view class="nav_com">
+    <view class="top">
+      <view class="ico"><image mode="widthFix" src="/images/logo.png"></image></view>
+      <view class="text">{{mobile}}</view>
+    </view>
+    <view class="com">
+      <navigator class="box" url="../grxx/grxx"><image mode="widthFix" src="/images/nav1.png"></image>个人信息<image class="ico_fh" mode="widthFix" src="/images/ico_fh.png"></image></navigator>
+      <navigator class="box" url="../lsdd/lsdd"><image mode="widthFix" src="/images/nav2.png"></image>历史订单<image class="ico_fh" mode="widthFix" src="/images/ico_fh.png"></image></navigator>
+      <navigator class="box" url="../wdqb/wdqb"><image mode="widthFix" src="/images/nav3.png"></image>我的钱包<image class="ico_fh" mode="widthFix" src="/images/ico_fh.png"></image></navigator>
+      <navigator class="box" url="../cjwt/cjwt"><image mode="widthFix" src="/images/nav4.png"></image>常见问题<image class="ico_fh" mode="widthFix" src="/images/ico_fh.png"></image></navigator>
+      <navigator class="box" url="../news_list/news_list"><image mode="widthFix" src="/images/nav5.png"></image>消息中心<image class="ico_fh" mode="widthFix" src="/images/ico_fh.png"></image></navigator>
+    </view>
+  </view>
+</view>

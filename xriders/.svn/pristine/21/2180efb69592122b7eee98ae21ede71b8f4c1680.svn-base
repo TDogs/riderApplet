@@ -1,0 +1,66 @@
+<!--pages/grxx/grxx.wxml-->
+<view class="head">
+  <view class="menu_ico" bindtap='goBack'><image mode="widthFix" src="/images/ico_jt.png"></image></view>
+  <view class="com">个人信息</view>
+  <navigator class="news_ico" url="../news_list/news_list"><image mode="widthFix" src="/images/news_ico.png"></image><view class="ico">3</view></navigator>
+</view>
+
+<view class="grxx">
+  <view class="box">
+    <view class="left">姓名</view>
+    <view class="right">{{member.name}}</view>
+  </view>
+  <view class="box">
+    <view class="left">性别</view>
+    <view class="right">{{member.sex}}</view>
+  </view>
+  <view class="box">
+    <view class="left">出生日期</view>
+    <view class="right">{{member.birth_date}}</view>
+  </view>
+  <view class="box">
+    <view class="left">联系电话</view>
+    <view class="right">{{member.tel}}</view>
+  </view>
+  <view class="box">
+    <view class="left">常住地址</view>
+    <view class="right">{{member.province_name + member.city_name + member.area_name + member.address}}</view>
+  </view>
+  <view class="box">
+    <view class="left">服务城市</view>
+    <view class="right">{{member.service_province_name + member.service_city_name + member.service_area_name}}</view>
+  </view>
+  <view class="box">
+    <view class="left">服务门店</view>
+    <view class="right">{{member.shopname}}</view>
+  </view>
+  <view class="box">
+    <view class="left">身份证号</view>
+    <view class="right">{{member.id_card}}</view>
+  </view>
+  <view class="box">
+    <view class="left">身份证照片</view>
+    <view class="right">已上传</view>
+  </view>
+  <view class="box">
+    <view class="left">健康证照片</view>
+    <view class="right">已上传</view>
+  </view>
+  <view class="box">
+    <view class="left">简历</view>
+    <view class="right">{{member.resume}}</view>
+  </view>
+  <view class="box">
+    <view class="left">紧急联系人</view>
+    <view class="right">{{member.urgency_cont_username}}</view>
+  </view>
+  <view class="box">
+    <view class="left">联系人电话</view>
+    <view class="right">{{member.urgency_cont_username_tel}}</view>
+  </view>
+  <view class="box">
+    <view class="left">与本人关系</view>
+    <view class="right">{{member.urgency_relation}}</view>
+  </view>
+</view>
+

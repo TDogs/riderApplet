@@ -1,0 +1,68 @@
+<!--pages/leading/leading.wxml-->
+<view class='banner'>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{banner_arr}}" wx:key="banner_key">
+      <swiper-item> 
+            <image src="{{item.img}}" class="slide-image" catchtap="toLink" data-link="/pages{{item.link}}"></image> 
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="leading_t">
+  <view class="title">元祖小程序来啦！</view>
+  <view class="text">纪念日送礼、电子券传情为您服务：</view>
+</view>
+<view class="leading_c">
+  <view class="left"><image src="{{ HBConfig_arr[1]['pic'] }}"  bindtap="jumpToList" data-link="/pages/list/list" mode="widthFix"></image></view>
+  <view class="right">
+
+    <view class="pic"><image src="{{ HBConfig_arr[3]['pic'] }}" bindtap="jumpTo" data-link="{{ HBConfig_arr[3]['link'] }}" data-v="{{ HBConfig_arr[3]['version'] }}"  data-appid="{{ HBConfig_arr[3]['APPID'] }}" mode="widthFix"></image></view>
+
+    <view class="pic pic2"><image src="{{ HBConfig_arr[2]['pic'] }}" bindtap="jumpToDetail" mode="widthFix" data-link="/pages{{ HBConfig_arr[2]['link'] }}"></image></view>
+  </view>
+</view>
+
+<view class='list'> 
+    <view class='list_t'>热门商品</view>
+    <view class='list_c' >
+        <view class='pro' wx:for="{{ HotProducts_arr }}" wx:key="hp_key">
+          <navigator url='/pages{{item.link}}'>
+            <image class='pro_pic' src='{{item.pic}}' mode="widthFix"></image>
+          </navigator>
+          <navigator url='/pages{{item.link}}'>
+            <view class='pro_text'>{{item.product_name}}</view>
+          </navigator>
+        </view>
+    </view>
+</view>
+
+
+<view class='menu'> 
+  <view class='menu_a' catchtap="toHistoryPage"><image src="../images/tabBar1.png" mode="widthFix"></image>购买历史</view> 
+  <view class='menu_a' catchtap="toReceiveGift"><image src="../images/tabBar2.png" mode="widthFix"></image>收到的祝福</view>
+</view>
+
+<view>
+  <auth id="auth"  auth_show="{{auth_show}}" bind:authResult="onAuthResult" 
+  bind:closeAuth="onCloseAuth" ></auth>   
+  <regist id="regist"  regist_show="{{regist_show}}" bind:registResult="onRegistResult" 
+  bind:closeRegist="onCloseRegist" ></regist>   
+</view>
+
+
+<cover-view class="pop_bg" hidden="{{tip}}">
+  <cover-view class="pop_bg_com">
+    <cover-view class="ico_ip"><cover-image src="../images/no.png" mode="widthFix"></cover-image></cover-view>
+    <cover-view class="pro_sz_pop">		
+      <cover-view class="com">
+        <cover-view class="text">亲爱的主人，您还有 {{ remind_count }}  张订单未使用，您可赠送好友或自用的。</cover-view>
+      </cover-view>
+      <cover-view class="box_bnt">
+        <cover-view class="bnt" bindtap='clickMe'>立即去使用</cover-view>
+      </cover-view>    
+    </cover-view>
+  </cover-view>
+  <cover-view class="box_gb" bindtap='box_gb'>×</cover-view>  
+</cover-view>
+

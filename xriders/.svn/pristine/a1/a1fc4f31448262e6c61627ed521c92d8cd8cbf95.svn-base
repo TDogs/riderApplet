@@ -1,0 +1,8 @@
+/* pages/news_xx/news_xx.wxss */
+
+.cjwt_xx{ margin:20rpx; background: #fff; border-radius:5px; -moz-border-radius:5px; overflow:hidden;}
+.cjwt_xx .title{ margin:20rpx 20rpx 0; padding-bottom:20rpx; border-bottom:1px solid #efefef;}
+.cjwt_xx .title .h3{ padding-bottom:20rpx; color: #333; font-size: 40rpx; font-weight:bold;}
+.cjwt_xx .title .p{ color:#a7a7a7; overflow:hidden;}
+.cjwt_xx .com{ padding:30rpx 20rpx 20rpx; font-size: 28rpx; line-height:44rpx;}
+.cjwt_xx .com view{ margin-bottom: 30rpx;}

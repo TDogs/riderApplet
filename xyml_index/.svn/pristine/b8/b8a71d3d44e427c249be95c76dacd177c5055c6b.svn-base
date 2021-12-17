@@ -1,0 +1,25 @@
+<view class="logo"><image mode="widthFix" src="../images/logo.png"></image></view>
+
+<view class="main">
+  <view class="title">您的手机号</view>
+  <view class="telephone">
+    <input type="text" placeholder="手机号码" placeholder-class="placeholder_style" data-name="data_phone" value="{{data_phone}}" disabled="disable" bindinput='getInputKey' /> 
+  </view>
+  <view class="telephone" hidden="true">
+    <input type="text" class="sendmsg_input" placeholder="短信验证码" data-name="data_code" value="{{data_code}}" placeholder-class="placeholder_style" bindinput='getInputKey' />
+    <view class='vertificate' bindtap="getVerificationCode">
+      {{time}}
+      <text>{{suffix}}</text>
+    </view> 
+  </view>
+  <button class='bottom' type='primary' data-mid="" bindtap="toActive">激活领取</button>
+   
+</view>
+
+<view class="instructions">
+  <view class="title">使用须知：</view>
+  <view class="com">
+    <view>1、领取成功后进入微商城的“电子列表页”可查看</view>
+    <view>2、在微商城选择对应商品可以直接使用礼券</view>
+  </view>
+</view>

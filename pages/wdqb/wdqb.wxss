@@ -1,0 +1,18 @@
+/* pages/wdqb/wdqb.wxss */
+page{ padding-top: 80rpx;}
+.wdqb_top{ background: #fff; box-shadow:0 2rpx 8rpx #ddd; -webkit-box-shadow:0 2rpx 8rpx #ddd; -moz-box-shadow:0 2rpx 8rpx #ddd;}
+.wdqb_top .text{ text-align:center;}
+.wdqb_top .text .p{ padding-top:30rpx;}
+.wdqb_top .text .h3{ font-size:60rpx; padding:20rpx 0 30rpx; color:#8547ad;}
+
+.wdqb_top .box{ padding:20rpx; overflow:hidden; border-top:2rpx solid #eee;}
+
+.wdqb_top .box text{ float:left; display:block; line-height:68rpx;}
+.wdqb_top .box .s{ margin: 0 10rpx;}
+.wdqb_top .box .btn{ float: left; border:2rpx solid #ddd; line-height: 66rpx; padding:0 12rpx; border-radius:5px; -moz-border-radius:5px;}
+.wdqb_top .bnt_cx{ width:65px; margin-left:10px; display:block; text-align:center; color:#fff; line-height:68rpx; background:#8547ad; border-radius:5px; -moz-border-radius:5px;}
+
+.wdqb_xx{ padding-top: 5rpx;}
+.wdqb_xx .box{ margin:20rpx; padding:20rpx 30rpx; line-height: 50rpx; background:#fff; border-radius:5px; -moz-border-radius:5px; box-shadow:0 2rpx 8rpx #ddd; -webkit-box-shadow:0 2rpx 8rpx #ddd; -moz-box-shadow:0 2rpx 8rpx #ddd;}
+.wdqb_xx .box .s{ color:#8547ad;}
+.wdqb_xx .no_box{ text-align: center; padding: 25rpx 0 40rpx; color: #999;}

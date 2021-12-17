@@ -1,0 +1,8 @@
+/* pages/grxx/grxx.wxss */
+page{ padding-top: 80rpx; background: #fff;}
+
+.grxx .box{ margin:0 40rpx; padding: 25rpx 0; overflow: hidden; border-bottom:1px solid #eee;}
+.grxx .box .left{ width: 25%; float: left;}
+.grxx .box .right{ width: 75%; float: right; color: #999; overflow:hidden; text-overflow:ellipsis; -o-text-overflow:ellipsis; white-space:nowrap;}
+
+

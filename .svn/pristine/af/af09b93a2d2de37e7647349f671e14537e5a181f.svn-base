@@ -1,0 +1,7 @@
+<!--pages/audit_failed/audit_failed.wxml-->
+<view class="audit_in_progress">
+  <view class="h1">温馨提示！</view>
+  <view class="p">您的骑手认证资料审核未通过，请查看未通过理由后，可重新填写再次提交认证。<view class="s">未通过理由：健康证图片上传不清晰</view></view>
+  <navigator class="bnt" url="../authentication/authentication">再次认证</navigator>
+</view>
+

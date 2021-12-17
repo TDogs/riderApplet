@@ -1,0 +1,19 @@
+/* pages/activation/activation.wxss */
+
+
+.group{ margin:100rpx auto 0; text-align:center;}
+
+
+.main{ margin:40rpx; padding-top:30rpx;}
+.main .title{ font-size: 38rpx; font-weight: bold; text-align: center; padding-bottom:10rpx;}
+.main text{color: #666; text-align: center; display: block; font-size: 28rpx; padding-bottom:40rpx;}
+
+ 
+ .bottom_home{margin-top: 30rpx;}
+
+.instructions{ padding:20rpx 40rpx;}
+.instructions .title{ font-size: 28rpx;}
+.instructions .com{padding:5rpx 10rpx 0 1em; font-size: 24rpx; color: #666;}
+.instructions view{ padding-bottom:10rpx;}
+
+

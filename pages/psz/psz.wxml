@@ -1,0 +1,90 @@
+<wxs module="numberUtil" src="../../utils/numberUtil.wxs"></wxs>
+<view class="head">
+  <navigator class="menu_ico" url="../menu/menu"><image mode="widthFix" src="/images/menu_ico.png"></image></navigator>
+  <view class="com">待取货</view>
+  <navigator class="news_ico" url="../news_list/news_list"><image mode="widthFix" src="/images/news_ico.png"></image><view class="ico">{{news_count}}</view></navigator>
+</view>
+
+<view class="order_list">
+  <view class="box" wx:for="{{list_orders}}" wx:for-index="kk" wx:key="ik">
+    <view class="h3">
+      <view class="p hong">{{item.shop_delivery_time}} 前送达</view>
+      <view class="s">￥<text>{{item.express_fee}}</text></view>
+    </view>
+    <view class="h4">
+      <view class="b">取货点：{{item.shop_name}}</view>
+      <view class="s">{{item.front_address}}</view>
+    </view>
+    <view class="h5">收货点：{{item.receiver_address}}</view>
+    <view class="label">相距：<text>{{numberUtil.numberFormat(item.distance / 1000)}}</text> 公里</view>
+    <view class="box_bnt">
+      <view class="bnt bnt_qrqh" catchtap="hpsd_bnt"  data-eid="{{item.id}}" data-k="{{kk}}">货品送达</view>
+      <view class="bnt bnt_qrqh" catchtap="finishOrderDetails" data-eid="{{item.id}}">查看详情</view>
+    </view>
+  </view>
+</view>
+
+
+<view class="bnt_refresh">刷新</view>
+
+<view class="no_order" hidden="{{order_statue}}">
+  <view class="ico"><image mode="widthFix" src="/images/no_order.png"></image></view>
+  <view class="t">还没有配送中的订单，快去抢单吧！</view>
+</view>
+
+<view class="footer">
+  <navigator class="box" open-type="redirect" url="../index/index">
+    <view class="ico"><image mode="widthFix" src="/images/footer_ico1.png"></image></view>
+    <view class="text">新任务</view>
+  </navigator>
+  <navigator class="box" open-type="redirect" url="../dqh/dqh">
+    <view class="ico"><image mode="widthFix" src="/images/footer_ico2.png"></image></view>
+    <view class="text">待取货</view>
+  </navigator>
+  <navigator class="box hov" open-type="redirect" url="../psz/psz">
+    <view class="ico"><image mode="widthFix" src="/images/footer_ico3_hov.png"></image></view>
+    <view class="text">配送中</view>
+  </navigator>
+</view>
+
+
+<view class="group_tc_bg" hidden="{{hpsd_com}}">
+  <view class="group_tc">
+    <view class="h3">温馨提示！</view>
+    <view class="p">请确认货品已送达，如发现虚假按货品送达将面临50元一次惩罚！</view>
+    <view class="bnt">
+      <view class="btn1" catchtap="hpsd_bnt">还未送达</view>
+      <view class="btn2" catchtap="qrsd_bnt">确认送达</view>
+    </view>
+  </view>
+</view>
+
+<view class="group_tc_bg" hidden="{{wcqr_com}}">
+  <view class="group_tc">
+    <view class="h3">订单配送完成确认</view>
+    <view class="com">
+      <view class="box">
+        <view>订单配送情况：</view>
+        <view name="">
+          <radio-group class="group" bindchange="radioChange">
+            <view class="label-2" wx:for="{{radioItems}}" wx:key="rk">
+              <radio id="{{item.name}}" hidden value="{{item.value}}" checked="{{item.checked}}"></radio>
+              <view class="label-2__icon">
+                <view class="label-2__icon-checked" style="opacity:{{item.checked ? 1: 0}}"></view>
+              </view>
+              <label class="label-2__text" for="{{item.name}}"><text>{{item.name}}</text></label>
+            </view>
+          </radio-group>               	
+        </view>
+      </view>
+      <view class="box">
+        <view>骑手备注：</view>
+        <textarea class="text" bindinput="txt_info"></textarea>
+      </view>
+    </view>
+    <view class="bnt">
+      <view class="btn1" catchtap="cancel">还未送达</view>
+      <view class="btn2" catchtap="wcqr_bnt">确认送达</view>
+    </view>
+  </view>
+</view>

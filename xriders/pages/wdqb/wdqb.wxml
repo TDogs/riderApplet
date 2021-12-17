@@ -1,0 +1,34 @@
+<!--pages/wdqb/wdqb.wxml-->
+<view class="head">
+  <view class="menu_ico" bindtap='goBack'><image mode="widthFix" src="/images/ico_jt.png"></image></view>
+  <view class="com">我的钱包</view>
+  <navigator class="news_ico" url="../news_list/news_list"><image mode="widthFix" src="/images/news_ico.png"></image><view class="ico">{{news_count}}</view></navigator>
+</view>
+
+<view class="wdqb_top">
+  <view class="text">
+    <view class="p"><text>收入</text>(元)</view>
+    <view class="h3">{{money}}</view>
+  </view>
+  <view class="box">
+    <text>起止时间：</text>
+    <picker class="btn" mode="date" value="{{date}}" bindchange="bindDateChange">{{date}}</picker>
+    <text class="s">-</text>
+    <picker class="btn" mode="date" value="{{date2}}" bindchange="bindDateChange2">{{date2}}</picker>
+    <text class="bnt_cx" bindtap="search">查询</text>
+  </view>   
+</view>
+
+<view class="wdqb_xx">
+  <view class="box" wx:for="{{list}}" wx:key="ik">
+    <view class="p">收入：<text class="s">￥{{item.express_fee}}</text></view>
+    <view class="p">配货单号：{{item.ph_no}}</view>
+    <view class="p">送达时间：{{item.updatedt}}</view>
+  </view>
+  <view class="no_box" hidden="{{status}}">没有更多资料了~</view>
+
+</view>
+
+  
+
+  

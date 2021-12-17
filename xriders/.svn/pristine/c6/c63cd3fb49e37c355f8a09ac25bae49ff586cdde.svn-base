@@ -1,0 +1,114 @@
+<!--pages/authentication/authentication.wxml-->
+<view class="head">
+  <view class="com">元祖骑手认证</view>
+</view>
+
+
+<view class="grxx">
+  <view class="box">
+    <view class="left">姓名</view>
+    <view class="right">
+      <input class="weui-input" auto-focus bindinput="setName"  placeholder="请输入真实姓名"/>
+    </view>
+  </view>
+  <view class="box">
+    <view class="left">性别</view>
+    <view class="right">
+      <picker bindchange="SexPickerChange" value="{{sex_index}}" range="{{sex_select}}">{{sex_select[sex_index]}}</picker>
+      <image class="ico_fh" mode="widthFix" src="/images/ico_fh.png"></image>
+    </view>
+  </view>
+  <view class="box">
+    <view class="left">出生日期</view>
+    <view class="right">
+      <picker class="btn" mode="date" value="{{date}}" bindchange="bindDateChange">{{date}}</picker>
+      <image class="ico_fh" mode="widthFix" src="/images/ico_fh.png"></image>
+    </view>
+  </view>
+  <view class="box">
+    <view class="left">联系电话</view>
+    <view class="right hov">{{mobile}}</view>
+  </view>
+  <view class="box">
+    <view class="left">常住地址</view>
+    <view class="right">
+      <picker mode="region" bindchange="bindRegionChange2" value="{{region2}}" custom-item="{{customItem}}">{{region2[0]}} {{region2[1]}} {{region2[2]}}</picker>
+      <image class="ico_fh" mode="widthFix" src="/images/ico_fh.png"></image>
+    </view>
+  </view>
+  <view class="box">
+    <view class="left">常住详细地址</view>
+    <view class="right">
+      <input class="weui-input" bindinput="detailed_address" placeholder="详细地址" />
+    </view>
+  </view>
+  <view class="box">
+    <view class="left">服务城市</view>
+    <view class="right">
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">{{region[0]}} {{region[1]}} {{region[2]}}</picker>
+      <image class="ico_fh" mode="widthFix" src="/images/ico_fh.png"></image>
+    </view>
+  </view>
+  <view class="box">
+    <view class="left">服务门店</view>
+    <view class="right">
+      <picker mode = "selector" disabled="{{store_null?'true':''}}" bindchange="bindPickerChange2" range-key="{{'name'}}" value="{{store_index}}" range="{{store_select}}">{{store_null?store_null:store_select[store_index]['name']}}</picker>
+      <image class="ico_fh" mode="widthFix" src="/images/ico_fh.png"></image>
+    </view>
+  </view>
+  <view class="box">
+    <view class="left">身份证号</view>
+    <view class="right">
+      <input class="weui-input" type="idcard" bindinput="set_id_card" placeholder="请输入身份证号" />
+    </view>
+</view>
+  <view class="box">
+    <view class="identityCard identityCard_front" bindtap="frontimage">
+      <view class="imgs_i"><image src="/images/zm.jpg" mode="widthFix"></image></view>
+      <view class="imgs_text">身份证正面</view>
+      <view class="imgs_p"><image src="{{FilePaths}}" mode="widthFix"></image></view>
+    </view>
+  </view>
+  <view class="box">
+    <view class="identityCard identityCard_recite" bindtap="reciteimage">
+      <view class="imgs_i"><image src="/images/fm.jpg" mode="widthFix"></image></view>
+      <view class="imgs_text">身份证背面</view>
+      <view class="imgs_p"><image src="{{recitePaths}}" mode="widthFix"></image></view>
+    </view>
+  </view>
+  <view class="box">
+    <view class="identityCard identityCard_recite" bindtap="healthimage">
+      <view class="imgs_i"><image src="/images/jkz.jpg" mode="widthFix"></image></view>
+      <view class="imgs_text">健康证</view>
+      <view class="imgs_p"><image src="{{health}}" mode="widthFix"></image></view>
+    </view>
+  </view>
+  <view class="box">
+    <view class="left">简历</view>
+    <view class="right">
+      <input class="weui-input" maxlength="300" bindinput="setResume" placeholder="不超过150字符的简历" />
+    </view>
+  </view>
+  <view class="box">
+    <view class="left">紧急联系人</view>
+    <view class="right">
+      <input class="weui-input" bindinput="setEmergencyContact" placeholder="请输入紧急联系人姓名" />
+    </view>
+  </view>
+  <view class="box">
+    <view class="left">联系人电话</view>
+    <view class="right">
+      <input class="weui-input" maxlength="11" bindinput="setEmergencyContactMobile" placeholder="紧急联系人电话" />
+    </view>
+  </view>
+  <view class="box">
+    <view class="left">与本人关系</view>
+    <view class="right">
+      <input class="weui-input"  bindinput="setRelation" placeholder="紧急联系人与本人关系" />
+    </view>
+  </view>
+  <view class="box_bnt">
+      <!--<navigator class="bnt" url="../index/index">取消认证</navigator>-->
+      <view class="bnt bnt_tj" bindtap="progress" >确认并提交</view>
+  </view>
+</view>

@@ -1,0 +1,32 @@
+/* pages/components/auth/auth.wxss */
+  
+.b1 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9;
+}
+
+/* 设置展示图片大小 */
+
+.b2 {
+  width: 100%;
+  height: 400rpx;
+  background: #fff;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+.com{ padding: 40rpx;}
+
+/* 设置展示图片与关闭按钮图片的距离 */
+button {width:100%;margin-top: 70rpx; color: #fff; background: #8547ad;}
+
+.close_ico{width: 80rpx;height: 80rpx; line-height: 80rpx; position:absolute;right: 0px;top: 0px;color: #666; text-align: center;}
+.text{text-align: center;color: #666; font-size: 24rpx; margin-top:40rpx; }

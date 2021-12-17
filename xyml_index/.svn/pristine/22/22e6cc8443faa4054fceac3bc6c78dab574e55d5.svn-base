@@ -1,0 +1,18 @@
+/* pages/list/list.wxss */
+page{ height: 100%;}
+.banner{ margin-bottom: 20rpx;}
+.banner image{ width: 100%; height:100%;}
+swiper{ height:582rpx;}
+
+.list{ padding-bottom:90rpx;}
+.list_t{padding:0rpx 24rpx; line-height:60rpx; font-size:32rpx;}
+.list_c{ padding:20rpx 24rpx ; padding-bottom:30rpx; overflow: hidden; }
+.pro{ width:-moz-calc(50% - 22rpx); width:-webkit-calc(50% - 22rpx); width:calc(50% - 22rpx); float: left; margin-bottom: 20rpx; box-shadow:0 0 8px #e2e2e2; -webkit-box-shadow:0 0 8px #e2e2e2; -moz-box-shadow:0 0 8px #e2e2e2; background: #fff;border-radius:8px;}
+.pro:nth-child(2n+0){ margin-left: 40rpx;}  
+.pro_pic{ width: 100%; height: auto;border-radius:8px; line-height: 0px; font-size: 0rpx;}
+.pro_text{display: block; text-align: center; line-height: 50rpx; padding-bottom: 5rpx; font-size:28rpx; clear: #333;}
+
+.menu{ width: 100%; height:90rpx; position: fixed;left: 0px; bottom: 0px; background: #fff; z-index: 1!important;border-top:2rpx solid #eee; }
+.menu .menu_a{ width: 50%; float: left;display: block; text-align: center; font-size: 32rpx; line-height:90rpx; color: #333;position: relative;}
+.menu .menu_a:after{ width:2rpx; height:40%; content:""; display:block; position:absolute; right:0px; top:30%;background: #eee;}
+.menu .menu_a:nth-child(2):after{display: none;}

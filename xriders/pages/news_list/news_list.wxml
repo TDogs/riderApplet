@@ -1,0 +1,8 @@
+<!--pages/news_list/news_list.wxml-->
+<view class="cjwt_bg xxzx">
+  <view class="box new" wx:for="{{news}}" wx:key="ik"  bindtap="details"  data-nid="{{item.id}}">
+    <view class="title">{{item.title}}</view>
+    <view class="s">{{item.createdt}}</view>
+    <image class="ico_fh" mode="widthFix" src="/images/ico_fh.png"></image>
+  </view>
+</view>

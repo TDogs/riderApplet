@@ -1,0 +1,12 @@
+/* pages/give_success/give_success.wxss */
+
+.group{ margin:100rpx auto 0; text-align:center;}
+
+
+.main{ margin:40rpx; padding-top:30rpx;}
+.main .title{ font-size: 38rpx;   text-align: center; padding-bottom:50rpx;}
+ 
+
+.main bottom{width: 100%;border-radius:45px;color:#fff}
+.main .bottom_2{width: 100%; margin-top:20rpx;  line-height: 90rpx; text-align: center; display: block; border-radius:5px; color:#666; border: 1px solid #666;}
+ 

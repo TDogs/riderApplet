@@ -1,0 +1,23 @@
+/* pages/receive/receive.wxss */
+page{background: #f6f6f6;}
+.menu{width: 100%; height: 90rpx; line-height: 90rpx; text-align: center; color: #333; font-size:28rpx; background: #fff; position: fixed;left: 0px;top: 0px;border-bottom: 1px solid #eee; z-index: 9;}
+.menu navigator{width:25%;float: left;position: relative;}
+.menu .on{ color: #dc0531; }
+.menu .on:after{ width:60%; height:2px; content:""; display:block; position:absolute; left:20%; bottom:0px;background: #dc0531; border-radius:45px; -moz-border-radius:45px;}
+
+.list{overflow: hidden; padding-top: 110rpx;}
+.box{ overflow: hidden; background: #fff; padding: 30rpx 20rpx 30rpx 0rpx; margin:0 20rpx 20rpx; position: relative; border-radius:5px; -moz-border-radius:5px; box-shadow:0 0 8px #e2e2e2; -webkit-box-shadow:0 0 8px #e2e2e2; -moz-box-shadow:0 0 8px #e2e2e2;}
+.box .left{ width: 26%; text-align: center; float: left; font-size: 22rpx; color: #999; line-height: 100rpx;}
+.box .left text{ font-size: 50rpx; color: #999;}
+.box .com{ width: 60%; float:left;}
+
+.box .com .title{ font-size: 28rpx; line-height: 30rpx; color: #999; padding-bottom: 10rpx;}
+.box .com .qh{ font-size: 26rpx; line-height: 36rpx; color: #999;}
+.box .com text{ display: block; font-size: 26rpx; color: #999; line-height: 36rpx;}
+
+
+
+
+
+
+

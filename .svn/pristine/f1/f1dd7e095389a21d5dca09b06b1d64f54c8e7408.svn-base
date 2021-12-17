@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "订单列表",
+  "usingComponents": {
+    "regist": "../components/regist/regist",
+    "auth": "../components/auth/auth"
+  }
+}

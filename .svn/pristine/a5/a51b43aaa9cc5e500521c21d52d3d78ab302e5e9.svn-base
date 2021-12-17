@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/user_protocol/user_protocol",
+    "pages/dqh/dqh",
+    "pages/psz/psz",
+    "pages/order_xx/order_xx",
+    "pages/order_xx2/order_xx2",
+    "pages/order_xx3/order_xx3",
+    "pages/menu/menu",
+    "pages/news_list/news_list",
+    "pages/news_xx/news_xx",
+    "pages/grxx/grxx",
+    "pages/lsdd/lsdd",
+    "pages/wdqb/wdqb",
+    "pages/cjwt/cjwt",
+    "pages/cjwt_xx/cjwt_xx",
+    "pages/authentication/authentication",
+    "pages/audit_in_progress/audit_in_progress",
+    "pages/audit_failed/audit_failed"
+  ],
+  "window": {
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "自建骑手",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "permission":{
+    "scope.userLocation":{
+      "desc":"你的位置信息将用于小程序位置接口的"
+    }
+  }
+}

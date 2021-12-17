@@ -1,0 +1,13 @@
+.logo{ width: 180rpx; height:180rpx; margin:100rpx auto 0; padding: 10rpx; background: #fff; border-radius:360px;}
+.logo image{ width: 100%;}
+
+.index{ padding-top: 150rpx;}
+.index_bg{ width: 180rpx; height:180rpx; display: block; margin:0 auto;background: #dc0531;border-radius:360px; padding: 10rpx;}
+.index_bg image{ width: 100%;}
+
+.com{ margin:40rpx; padding-top:30rpx;}
+.com .title{ width: 500rpx; margin: 0 auto; font-size:40rpx; padding-bottom:40rpx; text-align: center;}
+.com .text{ width: 600rpx; margin: 0 auto; font-size:28rpx;color: #666; text-align: center;}
+
+
+.com .bottom{width:60%; margin-top: 120rpx; border-radius: 5px;color:#fff}

@@ -1,0 +1,38 @@
+pages: 页面
+accept_give : 领取页， 点击分享链接后出现的页面
+accept_success: 好友领取成功页
+activation: 激活领取页
+bill: 结帐页
+components: 组件， 授权，注册的组件
+confirm_activation: 激活领取成功页
+give: 赠送朋友页
+give_success: 赠送朋友成功页
+images: 图片区
+index: 授权页，现没用
+invoice: 结帐的发票页
+list: 礼卡列表页 （首页）
+new_order: 购买历史页
+new_receive: 收到的祝福页
+product: 礼卡详情页
+purchase_success: 结帐成功页
+receive:
+use: 前进微商城说明页
+
+
+utils: 工具套件
+format.wxs:  字串转数字，带小数点二位
+md5.js: md5加密
+request.js: 请求套件
+service.js: 串接api 
+util.js: 工具包
+
+wxParse: 显示带有html标签的资料
+
+app.js: App 实例，是全部页面共享的
+app.json: 全局配置
+app.wxss: 全局样式
+project.config.json
+sitemap.json: 配置小程序及其页面是否允许被微信索引
+
+
+

@@ -1,0 +1,10 @@
+<!--pages/components/auth/auth.wxml-->
+<view class="b1" hidden="{{!auth_show}}">
+  <view class="b2">
+    <view class="com">
+      <view class="close_ico" bindtap="closeAuthMask">✕</view>
+      <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">微信授权</button>
+      <view class="text">点击授权登陆，一键绑定微信</view>
+  </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+<!--pages/audit_in_progress/audit_in_progress.wxml-->
+<view class="audit_in_progress">
+  <view class="h1">温馨提示！</view>
+  <view class="p">亲爱的元祖骑手，您资料已提交成功，管理员正在加速审核中，请耐心等待。</view>
+  <!--<navigator class="bnt" url="../index/index">知道了</navigator>-->
+</view>

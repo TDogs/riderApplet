@@ -1,0 +1,72 @@
+<view hidden="{{page_hidden}}">
+  <view class='pro_top'>
+    <view class="pic">
+      <image mode="widthFix" src='{{product_detail.img}}'></image>
+      <view class="box">
+        <view class='title'>{{product_detail.goods_name}}</view> 
+        <view class='text_bottom'>
+          <view class='jiage'>
+            <text>￥</text>
+            <view class='shuzi'>{{product_detail.unit_price}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='text'>
+      <view class='zufu_text'>{{product_detail.sender_txt}}</view>
+      <view class='nichen'>
+        — 您的好友：{{product_detail.sender_name}}
+      </view>
+    </view>
+  </view>
+  <view class="wait" hidden="{{!is_sender}}">
+    <block wx:if="{{product_detail.trans_status==1}}">
+      <text>等待好友领取</text>
+    </block> 
+    <block wx:else>
+      <text>好友已领取</text>
+    </block>
+    <view class="pro_bnt_bg">
+        <view class="pro_bnt" bindtap="toList">返回首页</view>
+    </view>
+  </view>
+  <view class="wait sender_wait" hidden="{{is_sender}}">
+    <block wx:if="{{product_detail.trans_status==1}}">
+      <view class="flowchart_box">
+         <image class="flowchart" src="../images/flow_chart_1.png" bindload="imageLoad"
+style="width:{{imgwidth}}rpx; height:{{imgheight}}rpx;"></image>
+      </view>
+            
+      <view class="instructions">
+        <view class="title">使用须知：</view>
+        <view class="com">
+          <view>1、领取成功后进入微商城的“电子列表页”可查看</view>
+          <view>2、在微商城选择对应商品可以直接使用礼券</view>
+        </view>
+      </view>
+
+      <view class="pro_bnt_bg">
+        <view class="pro_bnt" bindtap="toAccept">收下祝福</view>
+      </view>
+    </block>
+    <block wx:elif="{{product_detail.trans_status==0}}">
+      <view class="return_txt">很遗憾！因为您长时间未领取，此礼券已被好友撤回。您可告知Ta再次赠送给您后，即可领取礼券。</view>
+      <view class="pro_bnt_bg">
+        <view class="pro_bnt" bindtap="toList">返回首页</view>
+      </view>
+    </block>
+    <block wx:else>
+      <text>已领取</text>
+      <view class="pro_bnt_bg">
+        <view class="pro_bnt" bindtap="toList">返回首页</view>
+    </view>
+    </block>
+  </view>
+</view>
+
+<view>
+  <auth id="auth"  auth_show="{{auth_show}}" bind:authResult="onAuthResult" 
+  bind:closeAuth="onCloseAuth" ></auth>  
+    <regist id="regist"  regist_show="{{regist_show}}" bind:registResult="onRegistResult" 
+  bind:closeRegist="onCloseRegist" ></regist>  
+</view>

@@ -1,0 +1,11 @@
+<!--pages/give_success/give_success.wxml-->
+
+<view class="group"> 
+    <icon type="success" size="90"/> 
+</view>
+
+<view class="main">
+  <view class="title">赠送成功</view> 
+  <button class='bottom' type='primary' bindtap="toIndex">返回首页</button> 
+</view>
+ 

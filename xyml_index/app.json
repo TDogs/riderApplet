@@ -1,0 +1,29 @@
+{
+  "pages": [    
+    
+    "pages/leading/leading",
+    "pages/list/list",
+    "pages/index/index",
+    "pages/product/product",
+    "pages/bill/bill",
+    "pages/invoice/invoice",
+    "pages/give/give",
+    "pages/use/use",
+    "pages/new_order/new_order",
+    "pages/accept_success/accept_success",
+    "pages/activation/activation",
+    "pages/accept_give/accept_give",
+    "pages/new_receive/new_receive",
+    "pages/give_success/give_success",
+    "pages/confirm_activation/confirm_activation"
+    
+ 
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "元梦礼",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,19 @@
+
+<view class="group"> 
+    <icon type="success" size="90"/> 
+</view>
+
+<view class="main">
+  <view class="title">激活领取成功</view>
+  <text>请至元祖食品公众号查看、使用</text>
+  <button class='bottom' type='primary' bindtap="toUse">关注微信公众号</button> 
+  <button class='bottom_home' type='warn' bindtap="toHome">回首页</button> 
+</view>
+
+<view class="instructions">
+  <view class="title">使用须知：</view>
+  <view class="com">
+    <view>1、领取成功后进入微商城的“电子列表页”可查看</view>
+    <view>2、在微商城选择对应商品可以直接使用礼券</view>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+<!--pages/news_xx/news_xx.wxml-->
+<view class="cjwt_xx">
+  <view class="title">
+    <view class="h3">{{arr['title']}}</view>
+    <view class="p">{{arr['createdt']}}</view>
+  </view>
+  <view class="com">
+    <view>{{arr['text']}}</view>
+  </view>
+</view>
+

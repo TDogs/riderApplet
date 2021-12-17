@@ -1,0 +1,50 @@
+/* pages/new_order/new_order.wxss */
+ 
+page{background: #f6f6f6;}
+.menu{width: 100%; height: 90rpx; line-height: 90rpx; text-align: center; color: #333; font-size:28rpx; background: #fff; position: fixed;left: 0px;top: 0px;border-bottom: 1px solid #eee; z-index: 9;}
+.menu view{width:50%;float: left;position: relative;}
+.menu .on{ color: #dc0531; }
+.menu .on:after{ width:60%; height:2px; content:""; display:block; position:absolute; left:20%; bottom:0px;background: #dc0531; border-radius:45px; -moz-border-radius:45px;}
+
+.list{overflow: hidden; padding-top:90rpx}
+
+
+.pro_bg{padding: 20rpx; margin: 20rpx; box-shadow:0 0 8px #e2e2e2; -webkit-box-shadow:0 0 8px #e2e2e2; -moz-box-shadow:0 0 8px #e2e2e2; border-radius:5px; -moz-border-radius:5px;}
+.pro_bg .pro{position: relative;}
+.pro_bg .pro .pic{line-height: 0; font-size: 0;border-radius:8px;overflow: hidden;}
+.pro_bg .pro .pic image{width:100%;}
+
+.pro_bg{padding: 20rpx; margin: 20rpx; box-shadow:0 0 8px #e2e2e2; -webkit-box-shadow:0 0 8px #e2e2e2; -moz-box-shadow:0 0 8px #e2e2e2; border-radius:5px; -moz-border-radius:5px;}
+.pro_bg .pro{position: relative;}
+.pro_bg .pro .pic{line-height: 0; font-size: 0;border-radius:8px;overflow: hidden; position: relative; margin-bottom: 20rpx;}
+.pro_bg .pro .pic image{width:100%;}
+
+
+
+.pro .text{ width: 100%; height: 80rpx; line-height: 80rpx; position: absolute; left: 0; bottom:0; background:rgba(0, 0, 0, 0.7);}
+.pro .quanhao{ line-height:40rpx; font-size: 28rpx; color: #dc0531;}
+.pro .text .title{font-size:32rpx; color: #fff; float:left; margin-left: 20rpx;}
+.pro .text .box{ color: #dc0531; line-height:76rpx;font-size:32rpx; float: right; margin-right: 20rpx;}
+
+
+.pro .txt{ font-size:32rpx; color: #1aad19;}
+
+.pro .right{ position: absolute; right:10rpx; bottom:115rpx;border-radius:4px;overflow: hidden;}
+.pro .right .btn{ float: left; font-size:28rpx; padding: 5px 8px;color: #fff; background: #1aad19;}
+.pro .right .btn:last-child{ border-left:1px solid #8dd68c;}
+
+.no_data{margin: 400rpx auto 0; text-align: center; font-size:32rpx; color: #666;}
+
+.friend{ overflow: hidden;}
+.friend .name{ overflow: hidden; padding-top: 20rpx;}
+.friend .name image{ width: 80rpx; border-radius:360px; float: left; display: none;}
+.friend .name text{ line-height:70rpx; margin-left: 20rpx; font-size:26rpx; color: #666; display: block; text-align: right;}
+.friend .txt{ padding: 10rpx 0 0; color: #333; font-size:26rpx;}
+
+.txt_p{ padding: 10rpx 0;}
+.txt_p view{ font-size: 14px; color: #666; padding:5rpx 0;}
+.txt_p .txt_p_r{ float: right;}
+.txt_bnt{ font-size: 28rpx; padding: 10rpx 20rpx; position: absolute; left: 0px;top: 0px; color: #fff; background: #1aad19;}
+.return_view{font-size: 30rpx;color: #1aad19;text-decoration: underline;}
+.return_box text{margin:10rpx 0; padding: 10rpx 0 0; color: #333; font-size:26rpx;}
+

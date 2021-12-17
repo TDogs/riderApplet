@@ -1,0 +1,11 @@
+<!--pages/components/regist/regist.wxml-->
+
+<view class="b1" hidden="{{!regist_show}}">
+  <view class="b2">
+    <view class="close_ico" bindtap="closeRegistMask">✕</view>
+    <view class="title">您尚未注册， 请先注册</view>
+    <button class='bottom' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">授权手机号</button>
+    <view class="text">点击授权手机号，一键绑定手机号</view>
+  </view>
+</view>
+

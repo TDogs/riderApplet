@@ -1,0 +1,5 @@
+/* pages/audit_in_progress/audit_in_progress.wxss */
+page{ background: #fff;}
+.audit_in_progress .h1{ text-align:center; font-size:56rpx; color:#8547ad; padding:120rpx 0 60rpx;}
+.audit_in_progress .p{ padding:0px 40rpx 200rpx;}
+.audit_in_progress .bnt{ width:440rpx; margin:0px auto; display:block; line-height:90rpx; color:#fff; text-align:center; background:#8547ad; border-radius:10rpx; -moz-border-radius:10rpx;}

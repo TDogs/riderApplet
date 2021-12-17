@@ -1,0 +1,19 @@
+/* pages/activation/activation.wxss */
+
+
+.logo{ width: 200rpx; height:200rpx; margin:100rpx auto 0; }
+.logo image{ width: 100%;}
+
+.main{ margin:40rpx; padding-top:30rpx;}
+.main .title{ font-size: 38rpx; font-weight: bold; padding-bottom:40rpx;}
+.main .telephone{padding: 0px 10rpx; line-height:100rpx; border-top: 1px solid #eee;overflow: hidden;}
+.main .telephone input{height: 100rpx; line-height: 100rpx;}
+.main .telephone .sendmsg_input{width: 50%; float: left;}
+.main .telephone .vertificate{width: 50%; float: right; text-align: center;}
+.main .telephone:nth-child(3){ border-bottom: 1px solid #eee; margin-bottom: 50rpx;}
+
+
+.instructions{ padding:20rpx 40rpx;}
+.instructions .title{ font-size: 28rpx;}
+.instructions .com{padding:5rpx 10rpx 0 1em; font-size: 24rpx; color: #666;}
+.instructions view{ padding-bottom:10rpx;}

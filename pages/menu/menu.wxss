@@ -1,0 +1,11 @@
+/* pages/menu/menu.wxss */
+page{ background: #fff;}
+.nav_com .top{ text-align: center; padding:60rpx 0;}
+.nav_com .top .ico{width:200rpx; margin: 0 auto; padding:10rpx; font-size:0px; line-height:0px; border:1px solid #ddd; border-radius:360px; -moz-border-radius:360px;}
+.nav_com .top .ico image{ width:100%; border-radius:360px; -moz-border-radius:360px;}
+.nav_com .top .text{ padding-top:20rpx;}
+
+.nav_com .com{ padding:0 30rpx;}
+.nav_com .com .box{ display:block; font-size:32rpx; line-height:90rpx; text-align: right; border-bottom: 1px solid #eee;}
+.nav_com .com .box image{ width:50rpx; margin:20rpx 20rpx 0 10rpx; float: left;}
+.nav_com .com .box .ico_fh{ float: right; margin: 20rpx 0 0 10rpx;}

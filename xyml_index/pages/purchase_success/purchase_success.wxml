@@ -1,0 +1,25 @@
+<view class='pro_top'  >
+  <view class="pic">
+    <image mode="widthFix" src='{{item.images}}'></image>
+  </view>
+  <view class='text'>
+    <view class='title'>{{item.name}}</view>
+    <view class='text_c'>{{item.subName}}</view>
+    <view class='text_bottom'>
+      <view class='jiage'>
+        <text>￥</text>
+        <view class='shuzi'>{{item.price}}</view>
+      </view>
+      <view class='bnt'>×{{qty}}</view>
+    </view>
+    <view class="text_no">订单编号：{{product_detail.orderNo}}</view>
+    <view class="text_no">支付交易编号：{{product_detail.paymentNo}}</view>
+  </view>
+</view>
+<view class="txt">
+   <text>电子券已经购买成功!</text>
+   <text>您可将电子券与祝福赠送好友，也可选择自用.</text> 
+</view> 
+<view class="btn_box"> 
+    <view class='btn' catchtap='toHistoryPage'>查看我已购买</view>
+</view> 

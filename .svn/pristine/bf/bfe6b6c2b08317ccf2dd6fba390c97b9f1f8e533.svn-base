@@ -1,0 +1,67 @@
+<!--pages/order_xx3/order_xx3.wxml-->
+<!--pages/order_xx2/order_xx2.wxml-->
+<view class="order_xx_top">
+  <view class="com">
+    <view class="mdxx">
+      <view class="h3">{{order_details['shopInfo'].storename}}</view>
+      <view class="p">{{order_details['shopInfo'].front_province + order_details['shopInfo'].front_city + order_details['shopInfo'].front_area + order_details['shopInfo'].front_address}}</view>
+      <view class="a" bindtap="callstore"><image mode="widthFix" src="/images/ico_dh1.png"></image></view>
+    </view>
+    <view class="shrxx">
+      <view class="h3">{{order_details['orderInfo'].receiver}}</view>
+      <view class="p">{{order_details['orderInfo'].receiver_address}}</view>
+      <view class="a" bindtap="calluser"><image mode="widthFix" src="/images/ico_dh2.png"></image></view>
+    </view>
+  </view>
+</view>
+
+<view class="order_xx_com">
+  <view class="com">
+    <view class="box">
+      <view class="p">最迟到店：</view>
+      <view class="s">{{order_details[0].shop_pickup_time}}  前取货</view>
+    </view>
+    <view class="box">
+      <view class="p">最迟送达：</view>
+      <view class="s">{{order_details[0].shop_delivery_time}}  前送达</view>
+    </view>
+    <view class="box">
+      <view class="p">订单收入：</view>
+      <view class="b">￥ {{order_details[0].express_fee}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="order_xx_com">
+  <view class="com">
+    <view class="box">
+      <view class="p jc">商品信息：</view>
+    </view>
+    <view class="box"  wx:for="{{order_details['orderProductInfo']}}" wx:key="ik">
+      <view class="p">{{item.product_name}}：</view>
+      <view class="s">× {{order_details['count']}}</view>
+    </view>
+  </view>
+</view>
+
+
+<view class="order_xx_com order_bzxx">
+  <view class="com">
+    <view class="box">
+      <view class="p jc">备注信息：</view>
+    </view>
+    <view class="box">
+      <view class="p">买家备注：</view>
+      <view class="s">记得帮忙按时送到</view>
+    </view>
+    <view class="box">
+      <view class="p">卖家备注：</view>
+      <view class="s">环保单，顾客不需要附带餐具环保单</view>
+    </view>
+    <view class="box">
+      <view class="p">指派备注：</view>
+      <view class="s">蛋糕比较大，配送中尽量小心</view>
+    </view>
+  </view>
+</view>
+

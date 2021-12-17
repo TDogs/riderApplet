@@ -1,0 +1,94 @@
+<!--pages/order_xx2/order_xx2.wxml-->
+<view class="order_xx_top">
+  <view class="com">
+    <view class="mdxx">
+      <view class="h3">{{order_details['shopInfo'].storename}}</view>
+      <view class="p">{{order_details['shopInfo'].front_province + order_details['shopInfo'].front_city + order_details['shopInfo'].front_area + order_details['shopInfo'].front_address}}</view>
+      <view class="a" bindtap="callstore"><image mode="widthFix" src="/images/ico_dh1.png"></image></view>
+    </view>
+    <view class="shrxx">
+      <view class="h3">{{order_details['orderInfo'].receiver}}</view>
+      <view class="p">{{order_details['orderInfo'].receiver_address}}</view>
+      <view class="a" bindtap="calluser"><image mode="widthFix" src="/images/ico_dh2.png"></image></view>
+    </view>
+  </view>
+</view>
+
+
+<view class="order_xx_com">
+  <view class="com">
+    <view class="box">
+      <view class="p">最迟到店：</view>
+      <view class="s">{{order_details[0].shop_pickup_time}} 前取货</view>
+    </view>
+    <view class="box">
+      <view class="p">最迟送达：</view>
+      <view class="s">{{order_details[0].shop_delivery_time}} 前送达</view>
+    </view>
+    <view class="box">
+      <view class="p">订单收入：</view>
+      <view class="b">￥ {{order_details[0].express_fee}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="order_xx_com">
+  <view class="com">
+    <view class="box">
+      <view class="p jc">商品信息：</view>
+    </view>
+    <view class="box" wx:for="{{order_details['orderProductInfo']}}" wx:key="ik">
+      <view class="p">{{item.product_name}}：</view>
+      <view class="s">× {{item.qty}}</view>
+    </view>
+    <view class="box">
+      <view class="p jc">共计：</view>
+      <view class="s jc">{{order_details['count']}}件</view>
+    </view>
+  </view>
+</view>
+
+<view class="order_xx_bnt">
+  <view class="bnt bnt_qrsh" catchtap="hpsd_bnt">货品送达</view>
+</view>
+
+<view class="group_tc_bg" hidden="{{hpsd_com}}">
+  <view class="group_tc">
+    <view class="h3">温馨提示！</view>
+    <view class="p">请确认货品已送达，如发现虚假按货品送达将面临50元一次惩罚！</view>
+    <view class="bnt">
+      <view class="btn1" catchtap="hpsd_bnt">还未送达</view>
+      <view class="btn2" catchtap="qrsd_bnt">确认送达</view>
+    </view>
+  </view>
+</view>
+
+<view class="group_tc_bg" hidden="{{wcqr_com}}">
+  <view class="group_tc">
+    <view class="h3">订单配送完成确认</view>
+    <view class="com">
+      <view class="box">
+        <view>订单配送情况：</view>
+        <view name="">
+          <radio-group class="group" bindchange="radioChange">
+            <view class="label-2" wx:for="{{radioItems}}" wx:key="ik">
+              <radio id="{{item.name}}" hidden value="{{item.value}}" checked="{{item.checked}}"></radio>
+              <view class="label-2__icon">
+                <view class="label-2__icon-checked" style="opacity:{{item.checked ? 1: 0}}"></view>
+              </view>
+              <label class="label-2__text" for="{{item.name}}"><text>{{item.name}}</text></label>
+            </view>
+          </radio-group>               	
+        </view>
+      </view>
+      <view class="box">
+        <view>骑手备注：</view>
+        <textarea class="text" bindinput="txt_info"></textarea>
+      </view>
+    </view>
+    <view class="bnt">
+      <view class="btn1" catchtap="cancel">取消</view>
+      <view class="btn2" catchtap="wcqr_bnt">确认</view>
+    </view>
+  </view>
+</view>

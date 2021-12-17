@@ -1,0 +1,34 @@
+<view class='pro_top'>
+  <view class="pic">
+    <image mode="widthFix" src='{{product_detail.img}}'></image>
+  </view>
+  <view class='text'>
+    <view class='title'>{{product_detail.goods_name}}</view>
+    <view class='text_c'>{{product_detail.sbhead}}</view>
+    <view class='text_bottom'>
+      <view class='jiage'>
+        <text>￥</text>
+        <view class='shuzi'>{{product_detail.unit_price}}</view>
+      </view>
+      <view class='bnt'>×{{num}}</view>
+    </view>
+  </view>
+</view>
+<view class='pro_top pro_bottom'>
+  <view class="link" catchtap='toInvoice'>
+    <view class='pro_xx'>
+      <view class='pro_xx_l'>电子发票信息：</view>
+      <view class='pro_xx_r'>
+        <block wx:if="{{!needInvoice}}">不需要发票</block>
+        <block wx:elif="{{isCompanyInvoice}}">公司</block>
+        <block wx:else>个人</block>
+        <text>修改</text>
+        <image mode="widthFix" src='../images/jt.png'></image>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="pro_bnt_bg">
+  <view class="money"><text>￥</text>{{product_detail.unit_price * num}}</view>
+  <view class='pro_bnt' catchtap='sendOrder'>微信支付</view>
+</view>

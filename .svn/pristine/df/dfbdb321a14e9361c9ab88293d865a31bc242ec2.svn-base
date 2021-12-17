@@ -1,0 +1,5 @@
+/* pages/user_protocol/user_protocol.wxss */
+.title{padding: 60rpx 0 40rpx; text-align: center; color: #333; font-size: 40rpx; font-weight: bold;}
+.com{padding:0 40rpx 40rpx; color: #666; font-size: 28rpx; line-height:44rpx;}
+.com view{ margin-bottom: 30rpx;}
+.com view text{ display: block; font-weight: bold;}

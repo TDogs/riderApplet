@@ -1,0 +1,7 @@
+/* pages/news_list/news_list.wxss */
+.cjwt_bg{ padding: 20rpx;}
+.cjwt_bg .box{ padding:20rpx;  background:#fff; margin-bottom:10px; border-radius:5px; -moz-border-radius:5px; overflow:hidden; position: relative;}
+.cjwt_bg .box .title{line-height:20px; padding-right: 60rpx; overflow:hidden; text-overflow:ellipsis; -o-text-overflow:ellipsis; white-space:nowrap;}
+.cjwt_bg .box.new .title{ font-weight:bold;}
+.cjwt_bg .box .s{ margin-top: 10rpx; font-size: 28rpx; color: #999;}
+.cjwt_bg .box .ico_fh{ width:50rpx; position: absolute; right: 5rpx; top: 37rpx;}

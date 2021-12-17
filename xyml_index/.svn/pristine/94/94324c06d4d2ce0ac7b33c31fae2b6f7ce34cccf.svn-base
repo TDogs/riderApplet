@@ -1,0 +1,58 @@
+<import src="../../wxParse/wxParse.wxml"/>
+
+<view class='pro_top'>
+  <view class="pic">
+   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{product_detail.images}}" wx:key="banner_key">
+      <swiper-item> 
+            <image src="{{item}}" class="slide-image" ></image> 
+      </swiper-item>
+    </block>
+  </swiper> 
+  </view>
+  <view class='text'>
+    <view class='title'>{{product_detail.goods_name}}</view>
+    <view class='text_c'>{{product_detail.sbhead}}</view>
+    <view class='text_bottom'>
+      <view class='jiage'>
+        <text>￥</text>
+        <view class='shuzi'>{{product_detail.unit_price}}</view>
+      </view> 
+         <!-- 加减数量 -->
+          <view wx:for="{{items}}">
+            <view class="temp-view">
+              <template is="quantity" data="{{ ...item,index:index}}" />
+            </view> 
+          </view>
+        <!-- 加减数量 -->
+    </view>
+  </view>
+</view>
+
+<view class='pro_top pro_bottom'>                        
+  <view class='pro_xx'>
+    <view class='pro_xx_l'>可用时段：</view>
+    <view class='pro_xx_r'>{{product_detail.use_time}}</view>
+  </view>
+</view>
+
+<view class='pro_top pro_bottom'>     
+  <view class='pro_xx'>
+    <view class='pro_xx_l pro_xx_remove'>使用须知：</view>
+    <view class='pro_xx_r pro_xx_remove information'><template is="wxParse" data="{{wxParseData:use_notice.nodes}}"/></view> 
+  </view>
+</view>
+
+<view class="pro_bnt_bg">
+  <view class='pro_bnt' catchtap='toBill' wx:if="{{product_detail.stock>0}}">立即购买</view>
+  <view class='pro_bnt gray_btn'  wx:else>商品已售罄</view>
+</view>
+
+
+
+<view>
+<auth id="auth"  auth_show="{{auth_show}}" bind:authResult="onAuthResult" 
+  bind:closeAuth="onCloseAuth" ></auth>   
+  <regist id="regist"  regist_show="{{regist_show}}" bind:registResult="onRegistResult" 
+  bind:closeRegist="onCloseRegist" ></regist>   
+</view>

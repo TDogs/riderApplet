@@ -1,0 +1,14 @@
+<!--pages/cjwt/cjwt.wxml-->
+<view class="head">
+  <view class="menu_ico" bindtap='goBack'><image mode="widthFix" src="/images/ico_jt.png"></image></view>
+  <view class="com">常见问题</view>
+  <navigator class="news_ico" url="../news_list/news_list"><image mode="widthFix" src="/images/news_ico.png"></image><view class="ico">{{news_count}}</view></navigator>
+</view>
+
+<view class="cjwt_bg xxzx">
+  <view class="box new" wx:for="{{question}}" wx:key="ik"  bindtap="details"  data-fid="{{item.id}}">
+    <view class="title">{{item.title}}</view>
+    <view class="s">{{item.createdt}}</view>
+    <image class="ico_fh" mode="widthFix" src="/images/ico_fh.png"></image>
+  </view>
+</view>

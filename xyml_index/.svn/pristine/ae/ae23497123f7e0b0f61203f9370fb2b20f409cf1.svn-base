@@ -1,0 +1,7 @@
+/* pages/use/use.wxss */
+.lingquan_sy{ margin: 20rpx;}
+.lingquan_sy .pic{ line-height: 0; font-size: 0;}
+.lingquan_sy image{ width: 100%;}
+.lingquan_sy .com{ padding:0 40rpx 40rpx;}
+.lingquan_sy .title{ padding-bottom: 20rpx; font-size: 40rpx; color: #333;}
+.lingquan_sy .text{ line-height: 40rpx; padding:15rpx 0; font-size: 32rpx; color: #666; }

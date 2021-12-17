@@ -1,0 +1,9 @@
+<!--pages/use/use.wxml-->
+<view class="lingquan_sy">
+  <view class="pic"><image src="../images/QRC.jpg" mode="widthFix"></image></view>
+  <view class="com">
+    <view class="title">使用需知：</view>
+    <view class="text">保存：请截屏保存二维码，使用微信扫描二维码进入"元祖食品"公众号，或微信搜索"元祖食品"公众号直接进入。</view>
+    <view class="text">使用：小程序接收的手机号和公众号注册手机号码一致时，电子券接收后会自动保存在"元祖食品"公众号，我的电子券中，在微商城购买产品，结算时选择电子券抵扣。</view>
+  </view>      
+</view>

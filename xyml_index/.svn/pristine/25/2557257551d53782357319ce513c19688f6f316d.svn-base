@@ -1,0 +1,52 @@
+<!--pages/new_receive/new_receive.wxml-->
+<view class="menu">
+  <view wx:for="{{navTab}}" wx:key="index" data-idx="{{index}}" bindtap="currentTab" class="{{currentTab==index ? 'on' : ''}}">
+    <text>{{item}}</text>
+  </view>
+</view>
+<view class="list" hidden="{{!no_data}}">
+  <block wx:for="{{list_arr}}" wx:key="product_key" wx:for-item="product">
+    <view class="pro_bg">
+      <view class="pro">
+        <view class="pic">          
+          <image mode="widthFix" src="{{product.images}}"></image>
+          <view class="text">
+            <view class="title">{{product.name}}</view> 
+            <view class="box hong">￥{{product.price}}</view>
+          </view>
+        </view>   
+        <view class="quanhao" hidden="{{product.receiver_ticket==''}}">券号：{{product.receiver_ticket}}</view>      
+        <block wx:if="{{product.sender_txt!=''}}">
+          <view class="friend">    
+            <view class="txt">{{product.sender_txt}}</view>
+            <view class="name">
+              <image src="{{product.sender_image}}" mode="widthFix"></image>
+              <text>— 您的好友：{{product.sender_name}}</text>
+            </view>
+            <block wx:if="{{product.receiver_txt!=''}}">
+              <view class="return_view" bindtap="showReturnTxt" data-id="{{product.productID}}" data-index="{{index}}"  id="{{product.productID}}">我的回复</view> 
+              <view class="return_box" hidden="{{!product.display}}">
+                    <text>{{product.receiver_txt}}</text>
+              </view>
+            </block>
+          </view> 
+        </block>
+        <block wx:else>
+          <view >
+            <view class="txt_bnt">自用</view>
+            <view class="txt_p">
+              <view>订单号：<view class="txt_p_r">{{product.data1.orderNo}}</view></view>
+              <view>购买人手机：<view class="txt_p_r">{{product.data1.mobile}}</view></view>
+              <view>下单时间：<view class="txt_p_r">{{product.data1.createdt}}</view></view>
+              <view>支付时间：<view class="txt_p_r">{{product.data1.paidTime}}</view></view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </block>
+</view>
+
+<view class="no_data" hidden="{{no_data}}">
+  <text>您还没有收到过朋友送您的祝福哦</text>
+</view>

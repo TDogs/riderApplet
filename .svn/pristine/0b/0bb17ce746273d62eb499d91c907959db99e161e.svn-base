@@ -1,0 +1,96 @@
+<!--pages/index/index.wxml-->
+<wxs module="numberUtil" src="../../utils/numberUtil.wxs"></wxs>
+<view class="head">
+  <navigator class="menu_ico" url="../menu/menu"><image mode="widthFix" src="/images/menu_ico.png"></image></navigator>
+  <view class="com">订单列表</view>
+  <navigator class="news_ico" url="../news_list/news_list"><image mode="widthFix" src="/images/news_ico.png"></image><view class="ico">{{news_count}}</view></navigator>
+</view>
+
+<view class="order_list">
+  <view class="box" wx:for="{{list_orders}}" wx:for-index="kk" wx:key="ik">
+    <view class="h3">
+      <view class="p">{{item.shop_delivery_time}} 前送达</view>
+      <view class="s">￥<text>{{item.express_fee}}</text></view>
+    </view>
+    <view class="h4">
+      <view class="b">取货点：{{item.shop_name}}</view>
+      <view class="s">{{item.front_address}}</view>
+    <view class="h5">收货点：{{item.receiver_address}}</view>
+  </view>
+    <view class="label">相距：<text>{{numberUtil.numberFormat(item.distance / 1000)}}</text> 公里</view>
+    <view class="box_bnt">
+      <view class="a_bnt" catchtap="ljqd_com_bnt" data-eid="{{item.id}}" data-k="{{kk}}">立即抢单</view>
+    </view>
+  </view>
+</view>
+
+<view class="bnt_refresh">刷新</view>
+
+<view class="no_order" hidden="{{order_statue}}">
+  <view class="ico"><image mode="widthFix" src="/images/no_order_index.png"></image></view>
+  <view class="t">系统正在努力为你派单</view>
+</view>
+
+<view class="footer">
+  <navigator class="box hov" bindtap="JumpPage" data-type="1">
+    <view class="ico"><image mode="widthFix" src="/images/footer_ico1_hov.png"></image></view>
+    <view class="text">新任务</view>
+  </navigator>
+  <navigator class="box" bindtap="JumpPage" data-type="2">
+    <view class="ico"><image mode="widthFix" src="/images/footer_ico2.png"></image></view>
+    <view class="text">待取货</view>
+  </navigator>
+  <navigator class="box" bindtap="JumpPage" data-type="3">
+    <view class="ico"><image mode="widthFix" src="/images/footer_ico3.png"></image></view>
+    <view class="text">配送中</view>
+  </navigator>
+</view>
+
+
+<view class="group_tc_bg" hidden="{{ljqd_com}}">
+  <view class="group_tc">
+    <view class="h3">温馨提示！</view>
+    <view class="p">您是否确认抢单，恶意抢单再取消将会被平台惩罚哦！</view>
+    <view class="bnt">
+      <view class="btn1" catchtap="ljqd_com_bnt">暂时不抢</view>
+      <view class="btn2" catchtap="grab">确认抢单</view>
+    </view>
+  </view>
+</view>
+
+<view class="group_tc_bg" hidden="{{yty_com}}">
+  <view class="group_tc">
+    <view class="h3">很遗憾！</view>
+    <view class="p">您的骑手资格已被门店停用，请联系门店人员，开启后才可恢复接单。</view>
+    <view class="bnt">
+      <view class="btn1" catchtap="yty_com_bnt">暂不联系</view>
+      <view class="btn2" catchtap="yty_com_bnt">立即联系</view>
+    </view>
+  </view>
+</view>
+
+
+<view class="group_tc_bg" bindtap="JumpPage" data-type="4"  hidden="{{mandate}}">
+  点击任意处登录/注册
+</view>
+
+
+<cover-view class="pop_bg" hidden="{{check_rider}}">
+  <cover-view class="pro_sz_pop">
+    <cover-view class="title">提示！</cover-view>
+    <cover-view class="com">
+      <cover-view class="text">{{check_rider_msg}}</cover-view>
+    </cover-view>
+    <cover-view class="box_bnt">
+      <cover-view class="bnt" bindtap='clickMe' data-status="{{check_rider_status}}">确定取消</cover-view>
+      <cover-view class="bnt bnt_qx" bindtap='clickMe' data-status="{{check_rider_status}}">暂不取消</cover-view>
+    </cover-view>
+  </cover-view>
+</cover-view>
+
+<view>
+  <auth id="auth"  auth_show="{{auth_show}}" bind:authResult="onAuthResult"
+        bind:closeAuth="onCloseAuth" ></auth>
+  <regist id="regist"  regist_show="{{regist_show}}" bind:registResult="onRegistResult"
+          bind:closeRegist="onCloseRegist" ></regist>
+</view>

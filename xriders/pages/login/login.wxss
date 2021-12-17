@@ -1,0 +1,9 @@
+/* pages/login/login.wxss */
+page{background: #fff;}
+.login_ico{ padding:30% 0; background: #efecea;}
+.login_ico image{ width: 100%;}
+
+.bnt_sj{ width:360rpx; margin: 80rpx auto 0px; height:88rpx; line-height:88rpx; color: #fff; font-size: 36rpx; background:#8547ad; border-radius:44px; text-align: center;}
+.text{margin: 70rpx 0 40rpx; text-align: center; font-size:24rpx; color: #999;}
+.text text{color: #444;}
+.text navigator{ display:inline-block; color: #444; text-decoration:underline;}

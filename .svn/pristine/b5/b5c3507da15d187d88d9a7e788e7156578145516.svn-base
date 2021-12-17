@@ -1,0 +1,75 @@
+<!--pages/order_xx/order_xx.wxml-->
+<view class="order_xx_top">
+  <view class="com">
+    <view class="mdxx">
+      <view class="h3">{{order_details['shopInfo'].storename}}</view>
+      <view class="p">{{order_details['shopInfo'].front_province + order_details['shopInfo'].front_city + order_details['shopInfo'].front_area + order_details['shopInfo'].front_address}}</view>
+      <view class="a" bindtap="callstore"><image mode="widthFix" src="/images/ico_dh1.png"></image></view>
+    </view>
+    <view class="shrxx">
+      <view class="h3">{{order_details['orderInfo'].receiver}}</view>
+      <view class="p">{{order_details['orderInfo'].receiver_address}}</view>
+      <view class="a" bindtap="calluser"><image mode="widthFix" src="/images/ico_dh2.png"></image></view>
+    </view>
+  </view>
+</view>
+
+<view class="order_xx_com">
+  <view class="com">
+    <view class="box">
+      <view class="p">最迟到店：</view>
+      <view class="s">{{order_details[0].shop_pickup_time}} 前取货</view>
+    </view>
+    <view class="box">
+      <view class="p">最迟送达：</view>
+      <view class="s">{{order_details[0].shop_delivery_time}} 前送达</view>
+    </view>
+    <view class="box">
+      <view class="p">订单收入：</view>
+      <view class="b">￥ {{order_details[0].express_fee}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="order_xx_com">
+  <view class="com">
+    <view class="box">
+      <view class="p jc">商品信息：</view>
+    </view>
+    <view class="box" wx:for="{{order_details['orderProductInfo']}}" wx:key="ik">
+      <view class="p">{{item.product_name}}：</view>
+      <view class="s">× {{item.qty}}</view>
+    </view>
+    <view class="box">
+      <view class="p jc">共计：</view>
+      <view class="s jc">{{order_details['count']}}件</view>
+    </view>
+  </view>
+</view>
+
+<view class="order_xx_bnt">
+  <view class="bnt" catchtap="wfps_bnt">无法配送</view>
+  <view class="bnt bnt_right" catchtap="qrdh_bnt">确认取货</view>
+</view>
+
+<view class="group_tc_bg" hidden="{{wfps_com}}">
+  <view class="group_tc">
+    <view class="h3">温馨提示！</view>
+    <view class="p">目前无法自动取消配送订单，只能拨打门店电话，让门店操作取消订单。</view>
+    <view class="bnt">
+      <view class="btn1" catchtap="wfps_bnt">继续配送</view>
+      <view class="btn2" catchtap="callstore_bnt">拨打门店电话</view>
+    </view>
+  </view>
+</view>
+
+<view class="group_tc_bg" hidden="{{qrdh_com}}">
+  <view class="group_tc">
+    <view class="h3">温馨提示！</view>
+    <view class="p">请到门店拿到商品确认无误后，再按确认取货，虚假按确认取货将会被平台惩罚哦！</view>
+    <view class="bnt">
+      <view class="btn1" catchtap="cancel">还未到店</view>
+      <view class="btn2" catchtap="assPick">确认取货</view>
+    </view>
+  </view>
+</view>

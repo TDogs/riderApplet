@@ -1,0 +1,37 @@
+<view class='pro_top'>
+    <view class="pic">
+      <image mode="widthFix" src='{{product_detail.img}}'></image>
+      <view class="box">
+        <view class='title'>{{product_detail.goods_name}}</view> 
+        <view class='text_bottom'>
+          <view class='jiage'>
+            <text>￥</text>
+            <view class='shuzi'>{{product_detail.unit_price}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='text'>
+      <view class='zufu_text'>{{product_detail.sender_txt}}</view>
+      <view class='nichen'>
+        — 您的好友：{{product_detail.sender_name}}
+      </view>
+    </view>
+
+   
+  </view>
+  
+  <view class="zufu_box">
+   <view class='zufu_text'>
+      <view class="txt">回赠好友祝福语：</view>
+      <textarea type='text' bindinput='getInputKey'  maxlength="100" data-op="{{op}}" data-name="gift_txt" value="{{gift_txt}}"></textarea>
+    </view>
+    <view class='nichen'>
+      <view class='zufu_text_bnt' bindtap="changeGiftTxt">
+        <image mode="widthFix" src='../images/sx.png'></image>换一个祝福</view>
+      <input class='nichen_text' maxlength="20" bindinput='getInputKey' data-name="wx_nickname" value="{{wx_nickname}}"></input>
+    </view>
+  </view>
+<view class="pro_bnt_bg">
+  <button class="pro_bnt" bindtap="saveReturnPartner">确认回赠并激活领取</button>
+</view>

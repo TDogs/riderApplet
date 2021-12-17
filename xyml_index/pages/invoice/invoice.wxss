@@ -1,0 +1,17 @@
+/* pages/invoice/invoice.wxss */
+page{background: #f6f6f6;}
+
+.invoice{ overflow:hidden; background:#fff;}
+
+
+
+.invoice .box{ padding:0px 20rpx; height:90rpx; line-height:90rpx; color:#333; border-bottom:1px solid #f6f5f3; overflow: hidden;}
+.invoice .box_l{ float:left; font-size: 28rpx;}
+.invoice .box_r{ float:right; font-size: 28rpx;}
+.invoice .box_r input{ height:90rpx; color:#666;}
+.invoice .box_r .text{ width:100%; text-align:right;}
+.invoice .box_r label{ float: right; margin-left:40rpx;}
+.invoice_box_r{ float: right;}
+.invoice .invoice_xx .box_r{ width:60%;}
+.invoice_bnt{ margin:40rpx 20rpx; line-height:90rpx; text-align:center; color:#fff; font-size:32rpx; background:#e9004f;}
+

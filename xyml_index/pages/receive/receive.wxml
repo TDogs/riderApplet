@@ -1,0 +1,21 @@
+<!--pages/receive/receive.wxml-->
+
+
+<block wx:for="{{item.products}}" wx:key="product_key" wx:for-item="product">
+  <view>
+    <view>领取时间</view>
+    <view class="receive_time"></view>
+  </view>
+  <view class="pro">
+    <view class="pic">
+      <image mode="widthFix" src="{{product.images}}"></image>
+    </view>
+    <view class="text">
+      <view class="title">{{product.name}}</view>
+      <view class="box">{{product.subName}}</view>
+      <view class="box hong">￥{{product.price}}</view>
+    </view>
+  </view>
+  <view class="senderImg"></view>
+  <view class="senderTxt"></view>
+</block>

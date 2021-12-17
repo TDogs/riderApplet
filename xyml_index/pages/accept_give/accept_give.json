@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "收下祝福",
+  "component": true,
+  "usingComponents": { 
+    "auth": "../components/auth_receiver/auth_receiver",
+    "regist": "../components/regist/regist"
+  }
+}

@@ -1,0 +1,39 @@
+<view class='banner'>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{banner_arr}}" wx:key="banner_key">
+      <swiper-item> 
+            <image src="{{item.img}}" class="slide-image" catchtap="toLink" data-link="{{item.link}}"></image> 
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class='list'> 
+  <block wx:for="{{product_arr}}" wx:key="item_key">
+    <view class='list_t'>{{item.cate_name}}</view>
+    <view class='list_c'>
+      <block wx:for="{{item.goods}}" wx:for-item="goods" wx:key="goods_key">
+        <view class='pro'>
+          <navigator url='../product/product?pid={{goods.id}}'>
+            <image class='pro_pic' src='{{goods.img}}' mode="widthFix"></image>
+          </navigator>
+          <navigator url='../product/product?pid={{goods.id}}'>
+            <view class='pro_text'>{{goods.goods_name}}</view>
+          </navigator>
+        </view>
+      </block>
+    </view>
+  </block>
+</view>
+
+<view class='menu'> 
+  <view class='menu_a' catchtap="toHistoryPage" >购买历史</view> 
+  <view class='menu_a' catchtap="toReceiveGift">收到的祝福</view>
+</view>
+
+<view>
+  <auth id="auth"  auth_show="{{auth_show}}" bind:authResult="onAuthResult" 
+  bind:closeAuth="onCloseAuth" ></auth>   
+  <regist id="regist"  regist_show="{{regist_show}}" bind:registResult="onRegistResult" 
+  bind:closeRegist="onCloseRegist" ></regist>   
+</view>

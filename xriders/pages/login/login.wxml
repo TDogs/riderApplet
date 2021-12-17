@@ -1,0 +1,13 @@
+<!--pages/login/login.wxml-->
+<view class="login_ico"><image mode="widthFix" src="/images/register_pic.png"></image></view>
+<view class="bnt_sj" catchtap="gotoPage" hidden="{{auth_log}}">授权登录{{auth_log}}</view>
+<view class="bnt_sj" catchtap="getLocation">位置</view>
+<view class="text" hidden="{{auth_log}}">点击登录，即表示已阅读并同意 <text>《</text><navigator url="../user_protocol/user_protocol">元祖食品骑手协议</navigator><text>》</text></view>
+
+
+<view>
+    <auth id="auth"  auth_show="{{auth_show}}" bind:authResult="onAuthResult"
+          bind:closeAuth="onCloseAuth" ></auth>
+    <regist id="regist"  regist_show="{{regist_show}}" bind:registResult="onRegistResult"
+bind:closeRegist="onCloseRegist" ></regist>
+</view>

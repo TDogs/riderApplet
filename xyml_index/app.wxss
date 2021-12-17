@@ -1,0 +1,42 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+.pro_top{padding: 20rpx; margin: 20rpx; box-shadow:0 0 8px #e2e2e2; -webkit-box-shadow:0 0 8px #e2e2e2; -moz-box-shadow:0 0 8px #e2e2e2; border-radius:5px; -moz-border-radius:5px;}
+.pro_top .pic image{ width: 100%; border-radius:5px; -moz-border-radius:5px;}
+.pro_top .text{ padding: 20rpx 0rpx 0rpx;}
+.pro_top .title{font-size: 36rpx; color: #333; padding-bottom: 10rpx;}
+.pro_top .text_c{ font-size:28rpx; color: #666; padding-bottom:20rpx; line-height: 32rpx;}
+.pro_top .text_no{ font-size:24rpx; color: #666; padding-bottom:20rpx; line-height: 32rpx;}
+
+
+.text_bottom{ overflow: hidden; padding-bottom: 10rpx;}
+.text_bottom .jiage{ float: left; color: #dc0531; line-height:60rpx;}
+.text_bottom .jiage text{ float: left; margin-top: 5rpx; font-size: 24rpx;}
+.text_bottom .shuzi{ float:left; font-size:42rpx; margin-left: 5rpx; }
+
+
+
+/**弹窗样式**/
+.pop_bg{ width: 100%; height: 100%; position: fixed; left: 0; top: 0; z-index:999; background:rgba(0, 0, 0, 0.8);}
+.pop_com{ width:-moz-calc(100% - 40rpx); width:-webkit-calc(100% - 40rpx); width:calc(100% - 40rpx); margin: 20rpx; padding-top:120rpx; position: absolute; left: 0; bottom:200rpx;}
+.pop_pic{ width: 100%; position: absolute; left: 0; top:0rpx; z-index: 9;}
+.pop_pic cover-image{ width: 250rpx; margin: 0rpx auto;}
+.pro_sz_pop{ padding:130rpx 40rpx 40rpx; background: #fff; border-radius:4px; -moz-border-radius:4px; }
+.pro_sz_pop .title{ text-align: center; font-size:45rpx; color: #333;}
+.pro_sz_pop .com{ padding: 20rpx 0 40rpx; text-align: center;}
+.pro_sz_pop .com .text{ display: block; padding: 10rpx 0; font-size: 30rpx; color: #666; white-space:normal;height: 280rpx;}
+.pro_sz_pop .box_bnt{ padding: 0;}
+
+/**按钮样式**/
+.box_bnt{ overflow: hidden; padding:20rpx;}
+.box_bnt .bnt{ line-height:90rpx; font-size:32rpx; text-align: center; color: #fff; border: 1px solid #DB0050;  background: #DB0050; border-radius:4px; -moz-border-radius:4px;}
+.box_bnt .bnt_qx{ margin-top: 20rpx;  color: #333; border: 1px solid #ddd; background: #fff;}
+.box_bnt_text{ padding:20rpx 0; font-size: 32rpx; color: #fff; text-align: center;}
